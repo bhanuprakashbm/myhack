@@ -1,0 +1,236 @@
+.prize-pool {
+  padding: 100px 0;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 20px 0;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.pool-text {
+  background: linear-gradient(135deg, #4A90E2 0%, #7B68EE 50%, #9370DB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.price-text {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 30%, #FF6B9D 60%, #C44569 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.prize-amount {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.amount-text {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, 
+    #FF6B6B 0%, 
+    #4ECDC4 15%, 
+    #45B7D1 30%, 
+    #96CEB4 45%, 
+    #FFEAA7 60%, 
+    #DDA0DD 75%, 
+    #98D8C8 90%, 
+    #F7DC6F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.currency-text {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, 
+    #667eea 0%, 
+    #764ba2 25%, 
+    #f093fb 50%, 
+    #f5576c 75%, 
+    #4facfe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.prize-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.prize-item {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(74, 144, 226, 0.3);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(15px);
+}
+
+.prize-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(74, 144, 226, 0.6);
+  box-shadow: 0 20px 60px rgba(74, 144, 226, 0.3);
+}
+
+.prize-position {
+  font-size: 2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.prize-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.prize-extras {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.additional-prizes {
+  text-align: center;
+}
+
+.additional-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #00ffff 0%, #00ff88 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.special-prizes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.special-prize {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.special-prize:hover {
+  background: rgba(0, 255, 255, 0.15);
+  border-color: rgba(0, 255, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+.special-name {
+  font-weight: 600;
+  color: #00ffff;
+  font-size: 1.1rem;
+}
+
+.special-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .prize-pool {
+    padding: 80px 0;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+  
+  .amount-text {
+    font-size: 2.5rem;
+  }
+  
+  .currency-text {
+    font-size: 1.5rem;
+  }
+  
+  .prize-breakdown {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .prize-item {
+    padding: 30px 20px;
+  }
+  
+  .prize-value {
+    font-size: 2rem;
+  }
+  
+  .special-prizes {
+    grid-template-columns: 1fr;
+  }
+}

@@ -2,129 +2,171 @@ import React from 'react';
 import './Timeline.css';
 
 const Timeline = () => {
-  const events = [
-    {
-      time: '08:00 AM',
-      title: 'Registration Opens',
-      description: 'Check-in, collect your swag kit and ID badges',
-      day: 'Day 1 - March 15'
-    },
-    {
-      time: '09:30 AM',
-      title: 'Opening Ceremony',
-      description: 'Welcome address, keynote speeches, and hackathon rules',
-      day: 'Day 1 - March 15'
-    },
-    {
-      time: '11:00 AM',
-      title: 'Hacking Begins!',
-      description: 'Start building your innovative solutions',
-      day: 'Day 1 - March 15'
-    },
-    {
-      time: '01:00 PM',
-      title: 'Lunch Break',
-      description: 'Networking lunch with mentors and sponsors',
-      day: 'Day 1 - March 15'
-    },
-    {
-      time: '03:00 PM',
-      title: 'Tech Workshop 1',
-      description: 'AI/ML workshop by industry experts',
-      day: 'Day 1 - March 15'
-    },
-    {
-      time: '05:00 PM',
-      title: 'Mentor Round 1',
-      description: 'One-on-one mentorship sessions begin',
-      day: 'Day 1 - March 15'
-    },
-    {
-      time: '08:00 PM',
-      title: 'Dinner & Fun Activities',
-      description: 'Dinner with entertainment and networking',
-      day: 'Day 1 - March 15'
-    },
-    {
-      time: '11:00 PM',
-      title: 'Midnight Snacks',
-      description: 'Coffee, snacks, and late-night coding fuel',
-      day: 'Day 1 - March 15'
-    },
-    {
-      time: '08:00 AM',
-      title: 'Breakfast',
-      description: 'Fresh breakfast to energize your morning',
-      day: 'Day 2 - March 16'
-    },
-    {
-      time: '10:00 AM',
-      title: 'Tech Workshop 2',
-      description: 'Blockchain & Web3 development session',
-      day: 'Day 2 - March 16'
-    },
-    {
-      time: '12:00 PM',
-      title: 'Mentor Round 2',
-      description: 'Final mentorship and project guidance',
-      day: 'Day 2 - March 16'
-    },
-    {
-      time: '02:00 PM',
-      title: 'Lunch Break',
-      description: 'Last meal before final sprint',
-      day: 'Day 2 - March 16'
-    },
-    {
-      time: '06:00 PM',
-      title: 'Hacking Ends - Submission Deadline',
-      description: 'Submit your projects on Devfolio',
-      day: 'Day 2 - March 16'
-    },
-    {
-      time: '07:00 PM',
-      title: 'Project Presentations',
-      description: 'Top teams present to judges',
-      day: 'Day 2 - March 16'
-    },
-    {
-      time: '09:00 PM',
-      title: 'Closing Ceremony & Awards',
-      description: 'Winner announcements, prize distribution, and celebrations',
-      day: 'Day 2 - March 16'
-    }
-  ];
+  const scheduleData = {
+    day1: [
+      {
+        time: "8:30 am - 9:45 am",
+        title: "Registration & Check-in",
+        description: "Onboarding of participants - Document Verification and ID card distribution"
+      },
+      {
+        time: "9:45 am - 10:30 am",
+        title: "Opening Ceremony",
+        description: "Inauguration Ceremony / Hackathon Briefing / Problem Statement"
+      },
+      {
+        time: "10:30 am - 11:00 am",
+        title: "Break",
+        description: "Networking and refreshments"
+      },
+      {
+        time: "11:00 am - 11:30 pm",
+        title: "Mentor Interaction",
+        description: "Interaction with Track mentors"
+      },
+      {
+        time: "11:30 pm - 1:00 pm",
+        title: "Hacking Begins",
+        description: "Working on problem statement"
+      },
+      {
+        time: "1:00 pm - 2:00 pm",
+        title: "Lunch Break",
+        description: "Lunch and networking session"
+      },
+      {
+        time: "2:00 pm - 3:30 pm",
+        title: "Workshop",
+        description: "Basics of API with Postman"
+      },
+      {
+        time: "3:30 pm - 4:45 pm",
+        title: "Development Time",
+        description: "Work on Problem Statement (Resume)"
+      },
+      {
+        time: "4:45 pm - 5:30 pm",
+        title: "Fun Activity",
+        description: "Fun Activity and snacks"
+      },
+      {
+        time: "5:30 pm - 7:30 pm",
+        title: "First Submission",
+        description: "Work on Problem Statement and first submission"
+      },
+      {
+        time: "7:30 pm - 9:00 pm",
+        title: "Dinner",
+        description: "Dinner break"
+      },
+      {
+        time: "9:00 pm - 12:00 am",
+        title: "Night Coding",
+        description: "Work on Problem Statement (Resume)"
+      }
+    ],
+    day2: [
+      {
+        time: "12:00 am - 7:00 am",
+        title: "Sleep or Work",
+        description: "Sleep or continue working"
+      },
+      {
+        time: "7:00 am - 8:30 am",
+        title: "Breakfast",
+        description: "Morning breakfast"
+      },
+      {
+        time: "8:30 am - 9:00 am",
+        title: "Leaderboard Update",
+        description: "Leaderboard Score Release"
+      },
+      {
+        time: "9:00 am - 10:00 am",
+        title: "Mentor Guidance",
+        description: "Mentor Guidance Session"
+      },
+      {
+        time: "10:30 am - 1:00 pm",
+        title: "Final Development",
+        description: "Work on Problem Statement (Resume)"
+      },
+      {
+        time: "1:00 pm - 2:00 pm",
+        title: "Lunch",
+        description: "Lunch break"
+      },
+      {
+        time: "2:00 pm - 3:00 pm",
+        title: "Final Touches",
+        description: "Work on Problem Statement (Resume)"
+      },
+      {
+        time: "3:00 pm - 5:30 pm",
+        title: "Presentations",
+        description: "Final Presentation and Networking Session"
+      },
+      {
+        time: "5:30 pm - 6:00 pm",
+        title: "Break",
+        description: "Break and Snacks"
+      },
+      {
+        time: "6:00 pm - 7:00 pm",
+        title: "Results & Closing",
+        description: "Result Finalization and Announcement"
+      }
+    ]
+  };
 
   return (
     <section id="timeline" className="timeline-section">
-      <div className="section-background">
-        <div className="grid-overlay"></div>
-        <div className="gradient-orb orb-1"></div>
-        <div className="gradient-orb orb-2"></div>
-      </div>
-      <div className="timeline-container">
+      <div className="container">
         <div className="section-header">
-          <span className="section-tag">Event Schedule</span>
-          <h2 className="section-title">48-Hour Journey</h2>
-          <p className="section-description">
-            Complete schedule of workshops, mentorship, meals, and milestones
-          </p>
+          <h2 className="section-title">
+            <span className="colorful-gradient-text">Schedule</span>
+          </h2>
+          <p className="registration-info">Registration Closing at March 10, 2025</p>
         </div>
 
-        <div className="timeline">
-          {events.map((event, index) => (
-            <div key={index} className="timeline-item">
-              <div className="timeline-marker">
-                <div className="marker-icon"></div>
-              </div>
-              <div className="timeline-content">
-                <div className="timeline-day">{event.day}</div>
-                <div className="timeline-time">{event.time}</div>
-                <h3 className="timeline-title">{event.title}</h3>
-                <p className="timeline-description">{event.description}</p>
-              </div>
+        <div className="timeline-container">
+          <div className="timeline-line"></div>
+          
+          {/* Day 1 */}
+          <div className="day-section">
+            <div className="day-header">
+              <h3 className="day-title">Day 1</h3>
             </div>
-          ))}
+            
+            {scheduleData.day1.map((event, index) => (
+              <div key={`day1-${index}`} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
+                <div className="timeline-marker"></div>
+                <div className="timeline-card">
+                  <div className="timeline-time">{event.time}</div>
+                  <h4 className="timeline-title">{event.title}</h4>
+                  <p className="timeline-description">{event.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Day 2 */}
+          <div className="day-section">
+            <div className="day-header">
+              <h3 className="day-title">Day 2</h3>
+            </div>
+            
+            {scheduleData.day2.map((event, index) => (
+              <div key={`day2-${index}`} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
+                <div className="timeline-marker"></div>
+                <div className="timeline-card">
+                  <div className="timeline-time">{event.time}</div>
+                  <h4 className="timeline-title">{event.title}</h4>
+                  <p className="timeline-description">{event.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

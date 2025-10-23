@@ -5,7 +5,7 @@
 }
 
 .App {
-  background-color: #0a0a0a;
+  background: transparent;
   color: #fff;
   min-height: 100vh;
   overflow-x: hidden;
@@ -17,7 +17,7 @@
 /* Ensure all sections have proper z-index */
 section {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 html {

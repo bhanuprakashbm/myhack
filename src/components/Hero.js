@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -16,11 +18,12 @@ const Hero = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  const scrollToRegister = () => {
-    const element = document.getElementById('register');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleRegisterClick = () => {
+    navigate('/register');
+  };
+
+  const handleScheduleClick = () => {
+    navigate('/schedule');
   };
 
   return (
@@ -84,11 +87,11 @@ const Hero = () => {
         </div>
 
         <div className="hero-actions">
-          <button className="btn-primary" onClick={scrollToRegister}>
+          <button className="btn-primary" onClick={handleRegisterClick}>
             Register Now
             <span className="btn-arrow">→</span>
           </button>
-          <button className="btn-secondary">
+          <button className="btn-secondary" onClick={handleScheduleClick}>
             View Schedule
           </button>
         </div>
